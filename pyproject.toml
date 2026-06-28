@@ -1,0 +1,24 @@
+[project]
+name = "cyclo"
+version = "0.1.0"
+description = "Cyclostationary signal analysis"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.7",
+    "numpy>=2.5.0",
+    "scipy>=1.18.0",
+]
+
+[project.scripts]
+cyclo-benchmark = "cyclo.benchmark:run_benchmark"
+
+[project.optional-dependencies]
+notebook = ["jupyter", "ipykernel"]
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
