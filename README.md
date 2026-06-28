@@ -22,13 +22,27 @@ This library was written by [Claude](https://claude.ai/code) (Anthropic's AI cod
 
 Requires Python ≥ 3.14 and [uv](https://docs.astral.sh/uv/).
 
+**As a dependency in your own project** — add it directly from GitHub:
+
+```bash
+uv add git+https://github.com/TreyShenk/cyclo.git
+```
+
+Or with pip:
+
+```bash
+pip install git+https://github.com/TreyShenk/cyclo.git
+```
+
+**To work on the package itself** — clone and install in editable mode:
+
 ```bash
 git clone https://github.com/TreyShenk/cyclo.git
 cd cyclo
 uv sync
 ```
 
-For the demo notebook:
+`uv sync` installs the package in editable mode along with all dependencies, so changes to `src/cyclo/` take effect immediately without reinstalling. For the demo notebook:
 
 ```bash
 uv sync --extra notebook
