@@ -1,5 +1,7 @@
 # cyclo
 
+[![CI](https://github.com/TreyShenk/cyclo/actions/workflows/ci.yml/badge.svg)](https://github.com/TreyShenk/cyclo/actions/workflows/ci.yml)
+
 Python library for cyclostationary signal analysis, built around the **Time-Smoothing Method (TSM)** for computing cyclic spectral density and cyclic spectral coherence.
 
 ## Background
@@ -111,7 +113,7 @@ To run a single test file or test by name:
 uv run pytest tests/test_basic.py::test_output_shapes
 ```
 
-**Python version coverage:** tested on 3.10, 3.12, 3.13, and 3.14 via nox. On 3.10/3.11 the resolver picks numpy 2.2.x / scipy 1.15.x; on 3.12+ it picks the latest (numpy 2.5.x / scipy 1.18.x). Add versions to `PYTHON_VERSIONS` in `noxfile.py` as new Python releases arrive.
+**Python version coverage:** tested on 3.10–3.14 via nox and CI. On 3.10/3.11 the resolver picks numpy 2.2.x / scipy 1.15.x; on 3.12+ it picks the latest (numpy 2.5.x / scipy 1.18.x). Add versions to `PYTHON_VERSIONS` in `noxfile.py` as new Python releases arrive.
 
 ## Performance tuning
 
