@@ -16,6 +16,12 @@ cyclo-benchmark = "cyclo.benchmark:run_benchmark"
 [project.optional-dependencies]
 notebook = ["jupyter", "ipykernel"]
 
+[dependency-groups]
+dev = [
+    "nox>=2024.10.9",
+    "pytest>=8.0",
+]
+
 [tool.uv]
 package = true
 

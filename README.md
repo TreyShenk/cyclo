@@ -85,6 +85,34 @@ For cross-spectral analysis between two signals, pass both to the constructor:
 analyzer = CyclostationaryAnalyzer(x, y, fs=fs)
 ```
 
+## Development
+
+Dev dependencies (nox, pytest) are in a separate group and not installed for regular users:
+
+```bash
+uv sync --group dev
+```
+
+Run the test suite across all configured Python versions:
+
+```bash
+uv run nox
+```
+
+Or run pytest directly in the current environment:
+
+```bash
+uv run pytest tests/
+```
+
+To run a single test file or test by name:
+
+```bash
+uv run pytest tests/test_basic.py::test_output_shapes
+```
+
+**Note on Python version coverage:** `numpy>=2.5.0` and `scipy>=1.18.0` currently only ship wheels for Python 3.14+, so that is the only version in the nox matrix. Additional Python versions can be added to `PYTHON_VERSIONS` in `noxfile.py` as wheel support expands.
+
 ## Performance tuning
 
 Worker count for `scipy.fft` is automatically read from `~/.cyclo/config.json` if present. Run the benchmark once to generate this file tuned to your machine:
