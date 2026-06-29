@@ -20,7 +20,7 @@ This library was written by [Claude](https://claude.ai/code) (Anthropic's AI cod
 
 ## Installation
 
-Requires Python ≥ 3.14 and [uv](https://docs.astral.sh/uv/).
+Requires Python ≥ 3.10 and [uv](https://docs.astral.sh/uv/).
 
 **As a dependency in your own project** — add it directly from GitHub:
 
@@ -111,7 +111,7 @@ To run a single test file or test by name:
 uv run pytest tests/test_basic.py::test_output_shapes
 ```
 
-**Note on Python version coverage:** `numpy>=2.5.0` and `scipy>=1.18.0` currently only ship wheels for Python 3.14+, so that is the only version in the nox matrix. Additional Python versions can be added to `PYTHON_VERSIONS` in `noxfile.py` as wheel support expands.
+**Python version coverage:** tested on 3.10, 3.12, 3.13, and 3.14 via nox. On 3.10/3.11 the resolver picks numpy 2.2.x / scipy 1.15.x; on 3.12+ it picks the latest (numpy 2.5.x / scipy 1.18.x). Add versions to `PYTHON_VERSIONS` in `noxfile.py` as new Python releases arrive.
 
 ## Performance tuning
 
